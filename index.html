@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Stock Control</title>
+</head>
+
+<body class="bg-warning">
+  <div class="container" align="center">
+    <h1 class="title mt-5">Stock Control</h1>
+
+    <!--Form with inputs and buttons-->
+    <form onsubmit="app.addProduct()">
+      <!-- Products Type-->
+      <div class="input-group mb-3">
+        <select class="custom-select" name="productType">
+          <option value="Perecìvel">Perecìvel</option>
+          <option value="Limpeza">Limpeza</option>
+          <option value="Eletrônico">Eletrônico</option>
+        </select>
+      </div>
+      <!-- Value -->
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <span class="input-group-text">R$</span>
+        </div>
+        <input type="number" name="value" class="form-control" aria-label="valor dos produtos"
+          placeholder="Valor do produto" min="0">
+      </div>
+      <!-- name -->
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Nome do produto" aria-label="Usuário"
+          aria-describedby="basic-addon1" name="name">
+      </div>
+      <!-- Quantity -->
+      <div class="input-group mb-3">
+        <input type="number" name="quantity" class="form-control" aria-label="valor dos produtos"
+          placeholder="Quantidade" min="0">
+      </div>
+
+      <button type="submit" class="btn btn-success mb-3">Adicionar</button>
+
+    </form>
+    <!--Form end-->
+
+    <!--Table with data of forms-->
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Qtd</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!--Scripts-->
+  <script src="js/product.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+
+  <!--Scripts Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

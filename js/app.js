@@ -24,7 +24,7 @@ class App {
     firstColumn.innerText = product.name
     secondColumn.innerText = product.type
     thirdColumn.innerText = product.quantity
-    fourColumn.innerText = product.value
+    fourColumn.innerText = product.value += ' R$'
 
     let buttonToRemove = this.removeButton()
 
